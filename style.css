@@ -1,0 +1,27 @@
+body {
+  /* ลบ text-align: center; ออกไป เพราะ Flexbox จะจัดการแทน */
+  font-family: sans-serif;
+  background-color: #fff2cc;
+
+  /* โค้ดสำหรับ Flexbox เพื่อจัดกึ่งกลางทั้งแนวตั้งและแนวนอน */
+  display: flex;             /* ทำให้ body เป็น Flex container */
+  flex-direction: column;    /* จัดเรียงองค์ประกอบในแนวตั้ง (h1, img จะเรียงจากบนลงล่าง) */
+  justify-content: center;   /* จัดองค์ประกอบให้กึ่งกลางในแนวนอน (ตาม main axis) */
+  align-items: center;       /* จัดองค์ประกอบให้กึ่งกลางในแนวตั้ง (ตาม cross axis) */
+  min-height: 100vh;         /* กำหนดความสูงต่ำสุดของ body ให้เต็มหน้าจอ (viewport height) */
+  margin: 0;                 /* ลบ margin เริ่มต้นของ body ที่เบราว์เซอร์ใส่มา */
+}
+
+h1 {
+  font-size: 2em;
+  color: #333;
+  /* ถ้าอยากให้ h1 อยู่ใกล้รูปหมามากขึ้น อาจเพิ่ม margin-bottom เล็กน้อย */
+  /* margin-bottom: 20px; */
+}
+
+img {
+  width: 300px;
+  cursor: pointer;
+  transition: 0.1s;
+  /* ไม่จำเป็นต้องมี display: block; หรือ margin: 0 auto; แล้ว เพราะ body ที่เป็น Flexbox จัดการให้ */
+}
